@@ -11,7 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.composable
-import ru.sergey.astronomicalreferencebook3000.presentation.screens.newsScreen
+import ru.sergey.astronomicalreferencebook3000.presentation.screens.NewsScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +28,7 @@ fun Main() {
     val navController = rememberNavController()
     Column {
         NavHost(navController = navController, startDestination  = NavRoutes.NewsScreen.route) {
-            composable(NavRoutes.NewsScreen.route) { newsScreen() }
+            composable(NavRoutes.NewsScreen.route) { NewsScreen() }
         }
     }
 }
