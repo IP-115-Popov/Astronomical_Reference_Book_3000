@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Astronomical Reference Book 3000"
 include(":app")
- 
+include(":domain")
+include(":data")
