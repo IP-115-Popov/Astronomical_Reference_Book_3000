@@ -1,4 +1,4 @@
-package ru.sergey.astronomicalreferencebook3000.ui.theme
+package ru.sergey.astronomicalreferencebook3000.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
