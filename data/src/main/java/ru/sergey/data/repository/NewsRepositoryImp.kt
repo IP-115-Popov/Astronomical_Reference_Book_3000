@@ -20,9 +20,9 @@ class NewsRepositoryImp : NewsRepository {
         return storage
     }
 
-    override fun getLikesNews(news: News) {
+    override fun getLikesNews(newsId: Int) {
         storage.forEach { it: News ->
-            if (it.content == news.content)
+            if (it.id == newsId)
             {
                 it.likes++
             }

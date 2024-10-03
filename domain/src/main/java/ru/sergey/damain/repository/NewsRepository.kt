@@ -4,5 +4,5 @@ import ru.sergey.damain.models.News
 
 interface NewsRepository {
     fun loadNews(): List<News>
-    fun getLikesNews(news : News)
+    fun getLikesNews(newsId : Int)
 }
