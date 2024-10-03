@@ -13,6 +13,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -31,7 +32,7 @@ class NewsViewModel @Inject constructor(
 
     init {
         uploadShowNews()
-
+        startPeriodicNewsUpload()
         //viewModelScope.launch(Dispatchers.IO) {
          //   while(true) {
         //        uploadShowNews()
@@ -39,6 +40,15 @@ class NewsViewModel @Inject constructor(
         //    }
         //}
     }
+    private fun startPeriodicNewsUpload() {
+        viewModelScope.launch(Dispatchers.Main) {
+            while (isActive) { // Проверка активного состояния ViewModel
+                uploadShowNews()
+                delay(5000) // Задержка в 5 секунд
+            }
+        }
+    }
+
     fun uploadShowNews()
     {
         newsList = uploadNewsUseCase.exectute()
