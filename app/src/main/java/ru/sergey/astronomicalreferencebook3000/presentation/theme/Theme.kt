@@ -1,4 +1,4 @@
-package ru.sergey.astronomicalreferencebook3000.ui.theme
+package ru.sergey.astronomicalreferencebook3000.presentation.theme
 
 import android.app.Activity
 import android.os.Build
