@@ -1,4 +1,4 @@
-package ru.sergey.astronomicalreferencebook3000.presentation.app
+package ru.sergey.astronomicalreferencebook3000.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

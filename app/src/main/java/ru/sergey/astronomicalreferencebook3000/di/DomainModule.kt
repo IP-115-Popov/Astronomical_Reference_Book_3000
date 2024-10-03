@@ -1,4 +1,4 @@
-package ru.sergey.astronomicalreferencebook3000.presentation.di
+package ru.sergey.astronomicalreferencebook3000.di
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
